@@ -151,6 +151,7 @@ public class Administrator {
 
 	public static void showUserhistory() {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter User Name:");
 		String name = sc.next();
 		Connection con = DbConnection.getConnection();
 		PreparedStatement pst = null;
