@@ -133,11 +133,11 @@ public class User {
 			System.out.println("Account created sucessfully");
 			Thread.sleep(2000);
 			System.out.print("Please wait");
-			Thread.sleep(500);
+			Thread.sleep(1000);
 			System.out.print(".");
-			Thread.sleep(500);
+			Thread.sleep(1000);
 			System.out.print(".");
-			Thread.sleep(500);
+			Thread.sleep(1000);
 			System.out.print(".");
 		} catch (SQLException | InterruptedException e) {
 			// TODO Auto-generated catch block

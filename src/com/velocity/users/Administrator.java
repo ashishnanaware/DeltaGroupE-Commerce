@@ -1,5 +1,8 @@
 package com.velocity.users;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -150,9 +153,15 @@ public class Administrator {
 	}
 
 	public static void showUserhistory() {
-		Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter User Name:");
-		String name = sc.next();
+		String name=null;
+		try {
+			name = br.readLine();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		Connection con = DbConnection.getConnection();
 		PreparedStatement pst = null;
 		try {
@@ -167,7 +176,7 @@ public class Administrator {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		sc.close();
+		
 		menu();
 	}
 

@@ -239,7 +239,7 @@ public class Order extends User {
 
 		System.out.println("************************************************************************");
 		Iterator<Map.Entry<Integer, Products>> itr = map.entrySet().iterator();
-		System.out.println("ID. Product Name\t\tProduct\tQuantity");
+		System.out.println("ID. Product Name\t\tPrice\tQuantity");
 		int total=0;
 		while (itr.hasNext()) {
 			Map.Entry<Integer, Products> entry = itr.next();
